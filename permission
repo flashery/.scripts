@@ -1,0 +1,7 @@
+#! /bin/bash
+
+sudo chown -R $1:www-data $2
+sudo find $2 -type f -exec chmod 644 {} \; 
+sudo find $2 -type d -exec chmod 755 {} \;
+sudo chgrp -R www-data $2/storage $2/bootstrap/cache
+sudo chmod -R ug+rwx $2/storage $2/bootstrap/cache
