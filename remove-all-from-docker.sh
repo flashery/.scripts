@@ -22,3 +22,8 @@ docker network rm `docker network ls -q`
 
 # The following command show only show the default networks:
 # docker network ls
+
+# Docker compose remove and setup
+docker-compose rm -f
+docker-compose pull
+docker-compose up --build -d
